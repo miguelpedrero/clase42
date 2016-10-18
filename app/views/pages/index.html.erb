@@ -3,17 +3,25 @@
 <h1>Miguel Pedrero</h1>
 <br><br>
 
+
+<div class="well" >
 <h2> FORMULARIO </h2>
 
-<form  action="<%= publics_save_user_path %>" method="post">
+<form action="<%= pages_save_user_path %>" method="post">
+	<%= hidden_field_tag :authenticity_token,
+	form_authenticity_token %>
 
-	Nombre: <input name="name" Placeholder="Nombre">
+	Nombre: <input name="name" placeholder="Nombre" class="form-control">
 	<br><br>
-	Correo: <input name="email" Placeholder="Correo">
+	Correo: <input name="email" placeholder="Correo" class="form-control">
 	<br><br>
-	Edad: <input name="age" Placeholdere="Edad">
+	Edad: <input name="age" placeholder="Edad" class="form-control">
     <br><br>
-	<input class="btn btn-primary" type="submit" value="Enviar">
+	<input class="btn btn-primary" type="submit" value="ENVIAR" class="form-control">
+
 </form>
 
 </div>
+
+</div>
+
