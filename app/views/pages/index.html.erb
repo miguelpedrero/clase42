@@ -1,26 +1,40 @@
 <div class="container">
 
-<h1>Miguel Pedrero</h1>
+<h1 class="text-center" > <em > Miguel Pedrero </em> </h1>
 <br><br>
 
 
 <div class="well" >
-<h2> FORMULARIO </h2>
+<h2 class="text-center" > <strong class="bg-primary" > FORMULARIO </strong></h2>
 
 <form action="<%= pages_save_user_path %>" method="post">
 	<%= hidden_field_tag :authenticity_token,
 	form_authenticity_token %>
 
-	Nombre: <input name="name" placeholder="Nombre" class="form-control">
+	<h4>Nombre: </h4>
+	<input name="name" placeholder="Escribe tu Nombre" class="form-control">
+
 	<br><br>
-	Correo: <input name="email" placeholder="Correo" class="form-control">
+	<h4>Correo: </h4>
+	<input name="email" placeholder="Escribe tu Correo" class="form-control">
+
 	<br><br>
-	Edad: <input name="age" placeholder="Edad" class="form-control">
+	<h4>Edad:</h4> 
+	<input name="age" placeholder="Escribe tu Edad" class="form-control">
+
     <br><br>
-	<input class="btn btn-primary" type="submit" value="ENVIAR" class="form-control">
+	<input class="btn btn-primary btn-lg btn-group btn-group-justified" type="submit" value="ENVIAR" >
 
 </form>
 
+</div>
+
+<div class="well" > 
+	<h4>
+		<% @users.each do |u|%>
+		<p> Nombre: <%= u.name %> , Email: <%= u.email %> , Edad: <%= u.age %> </p>
+		<% end %> 
+	</h4>
 </div>
 
 </div>
